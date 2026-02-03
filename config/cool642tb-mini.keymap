@@ -70,7 +70,7 @@
 
         MOUSE {
             bindings = <
-&kp LG(TAB)     &kp LG(LS(LEFT))  &none  &kp LG(LS(RIGHT))  &none                    &none  &kp LG(LEFT)  &kp LG(UP_ARROW)    &kp LG(RIGHT)  &none
+&kp LG(TAB)     &kp LS(LG(LEFT))  &none  &kp LS(LG(RIGHT))  &none                    &none  &kp LG(LEFT)  &kp LG(UP_ARROW)    &kp LG(RIGHT)  &none
 &kp LCTRL       &mkp MB4          &none  &mkp MB5           &none  &none      &none  &none  &mkp MB1      &none               &mkp MB2       &kp RCTRL
 &kp LEFT_SHIFT  &none             &none  &none              &none  &none      &none  &none  &none         &kp LG(DOWN_ARROW)  &none          &kp RIGHT_SHIFT
 &none           &none             &none  &none              &none  &none      &none  &none                                                   &none
