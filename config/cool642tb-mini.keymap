@@ -15,19 +15,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        shift_tab {
-            bindings = <&kp LANG2>;
-            key-positions = <12 13>;
-        };
-
-        lang {
-            bindings = <&kp LANG1>;
-            key-positions = <18 19>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         encoder_msc_down_up: encoder_msc_down_up {
