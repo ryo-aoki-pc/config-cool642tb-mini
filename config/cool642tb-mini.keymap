@@ -35,6 +35,13 @@
             tap-ms = <20>;
         };
 
+        td_vim_d: td_vim_d {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_VIM_D";
+            #binding-cells = <0>;
+            bindings = <&kp LC(X)>, <&macro_vim_dd>;
+        };
+
         mm_vim_shift_d: mm_vim_shift_d {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_VIM_SHIFT_D";
@@ -42,6 +49,13 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        td_vim_y: td_vim_y {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_VIM_Y";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>, <&macro_vim_yy>;
         };
 
         mm_vim_u: mm_vim_u {
