@@ -34,6 +34,16 @@
 
             tap-ms = <20>;
         };
+
+        mt_vim_a: mt_vim_a {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_VIM_A";
+            bindings = <&kp>, <&mm_vim_a>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+        };
     };
 
     macros {
