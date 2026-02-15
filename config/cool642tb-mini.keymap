@@ -36,6 +36,93 @@
         };
     };
 
+    macros {
+        macro_vim_dd: macro_delete_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp HOME>,
+                <&macro_wait_time 100>,
+                <&kp LS(END)>,
+                <&macro_wait_time 100>,
+                <&kp LC(X)>;
+
+            label = "MACRO_DELETE_LINE";
+        };
+
+        macro_vim_yy: macro_yank_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp HOME>,
+                <&macro_wait_time 100>,
+                <&kp LS(END)>,
+                <&macro_wait_time 100>,
+                <&kp LC(C)>;
+
+            label = "MACRO_YANK_LINE";
+        };
+
+        macro_vim_shift_d: macro_vim_shift_d {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(END)>, <&macro_wait_time 100>, <&kp LC(X)>;
+
+            label = "MACRO_VIM_SHIFT_D";
+        };
+
+        macro_vim_shift_i: macro_vim_shift_i {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&macro_wait_time 100>, <&tog 2>;
+
+            label = "MACRO_VIM_SHIFT_I";
+        };
+
+        macro_vim_o: macro_vim_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp END>,
+                <&macro_wait_time 100>,
+                <&kp ENTER>,
+                <&macro_wait_time 100>,
+                <&tog 2>;
+
+            label = "MACRO_VIM_O";
+        };
+
+        macro_vim_shift_o: macro_vim_shift_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp HOME>,
+                <&macro_wait_time 100>,
+                <&kp ENTER>,
+                <&macro_wait_time 100>,
+                <&kp UP_ARROW>,
+                <&macro_wait_time 100>,
+                <&tog 2>;
+
+            label = "MACRO_VIM_SHIFT_O";
+        };
+
+        macro_vim_shift_a: macro_vim_shift_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END>, <&macro_wait_time 100>, <&tog 2>;
+
+            label = "MACRO_VIM_SHIFT_A";
+        };
+
+        macro_vim_a: macro_vim_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&macro_wait_time 100>, <&tog 2>;
+
+            label = "MACRO_VIM_A";
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
