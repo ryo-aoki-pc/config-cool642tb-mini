@@ -11,8 +11,9 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
-    flavor = "balanced";
-    quick-tap-ms = <0>;
+    quick-tap-ms = <150>;
+    tapping-term-ms = <150>;
+    flavor = "tap-preferred";
 };
 
 &mkp_input_listener { input-processors = <&zip_temp_layer 4 10000>; };
