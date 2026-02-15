@@ -35,6 +35,60 @@
             tap-ms = <20>;
         };
 
+        mm_vim_shift_d: mm_vim_shift_d {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_VIM_SHIFT_D";
+            bindings = <&td_vim_d>, <&macro_vim_shift_d>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_vim_u: mm_vim_u {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_VIM_U";
+            bindings = <&kp LC(Z)>, <&kp PAGE_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        mm_vim_i: mm_vim_i {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_VIM_I";
+            bindings = <&tog 2>, <&macro_vim_shift_i>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_vim_o: mm_vim_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_VIM_O";
+            bindings = <&macro_vim_o>, <&macro_vim_shift_o>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_vim_ctrl_then_shift_d: mm_vim_ctrl_then_shift_d {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_VIM_CTRL_THEN_SHIFT_D";
+            bindings = <&mm_vim_shift_d>, <&kp PAGE_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        mm_vim_a: mm_vim_a {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_VIM_A";
+            bindings = <&macro_vim_a>, <&macro_vim_shift_a>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         mt_vim_a: mt_vim_a {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_VIM_A";
@@ -43,6 +97,15 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <150>;
+        };
+
+        mm_vim_shift_4: mm_vim_shift_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_VIM_SHIFT_4";
+            bindings = <&none>, <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
