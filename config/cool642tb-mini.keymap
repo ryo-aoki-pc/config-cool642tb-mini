@@ -121,6 +121,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mm_vim_ctrl_r: mm_vim_ctrl_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_VIM_CTRL_R";
+            bindings = <&none>, <&kp LC(Y)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 
     macros {
@@ -236,10 +245,10 @@
 
         VIM {
             bindings = <
-&none              &kp LC(RIGHT)  &kp LC(RIGHT)              &none  &none                           &td_vim_y  &mm_vim_u  &mm_vim_i     &mm_vim_o  &kp LC(V)
-&mt_vim_a LCTRL 0  &none          &mm_vim_ctrl_then_shift_d  &none  &none         &none      &none  &kp LEFT   &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp RCTRL
-&kp LEFT_SHIFT     &kp DELETE     &none                      &none  &kp LC(LEFT)  &none      &none  &none      &none      &none         &none      &mt RIGHT_SHIFT LC(F)
-&none              &trans         &trans                     &none  &none         &none      &none  &mo 3                                          &none
+&none              &kp LC(RIGHT)  &kp LC(RIGHT)              &mm_vim_ctrl_r  &none                           &td_vim_y  &mm_vim_u  &mm_vim_i     &mm_vim_o  &kp LC(V)
+&mt_vim_a LCTRL 0  &none          &mm_vim_ctrl_then_shift_d  &none           &none         &none      &none  &kp LEFT   &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp RCTRL
+&kp LEFT_SHIFT     &kp DELETE     &none                      &none           &kp LC(LEFT)  &none      &none  &none      &none      &none         &none      &mt RIGHT_SHIFT LC(F)
+&none              &trans         &trans                     &none           &none         &none      &none  &mo 3                                          &none
             >;
         };
 
